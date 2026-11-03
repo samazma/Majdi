@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مجدي نعمة Majdi Nema | Official Legal & Human Rights Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script>
+      // توجيه تلقائي ذكي حسب لغة متصفح الزائر
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith("ar")) {
+        window.location.replace("ar/index.html");
+      } else if (userLang.startsWith("fr")) {
+        window.location.replace("fr/index.html");
+      } else if (userLang.startsWith("tr")) {
+        window.location.replace("tr/index.html");
+      } else {
+        window.location.replace("en/index.html");
+      }
+    </script>
+  </head>
+  <body
+    class="bg-slate-900 text-white min-h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="max-w-md w-full bg-slate-800 p-8 rounded-xl shadow-2xl text-center border border-slate-700"
+    >
+      <h1 class="text-2xl font-bold text-amber-500 mb-2">Majdi Nema</h1>
+      <p class="text-slate-400 text-sm mb-6">
+        Select your language / اختر اللغة / Choisissez votre langue / Dil seçin
+      </p>
+      <div class="grid grid-cols-2 gap-4 font-bold">
+        <a
+          href="ar/index.html"
+          class="bg-slate-700 hover:bg-amber-600 py-3 rounded-lg transition"
+          >العربية</a
+        >
+        <a
+          href="fr/index.html"
+          class="bg-slate-700 hover:bg-amber-600 py-3 rounded-lg transition"
+          >Français</a
+        >
+        <a
+          href="en/index.html"
+          class="bg-slate-700 hover:bg-amber-600 py-3 rounded-lg transition"
+          >English</a
+        >
+        <a
+          href="tr/index.html"
+          class="bg-slate-700 hover:bg-amber-600 py-3 rounded-lg transition"
+          >Türkçe</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

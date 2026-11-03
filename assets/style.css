@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-dark: #0f172a;
+  --accent-amber: #d97706;
+}
+
+/* تطبيق خط Cairo على النسخة العربية و Inter على الفرنسية والإنجليزية والتركية */
+html[dir="rtl"] body {
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir="ltr"] body {
+  font-family: "Inter", sans-serif;
+}
+
+/* تنسيق خاص للخط الزمني (Timeline) يتكيف تلقائياً مع RTL و LTR */
+html[dir="rtl"] .timeline-border {
+  border-right: 3px solid var(--accent-amber);
+  padding-right: 1.5rem;
+}
+
+html[dir="ltr"] .timeline-border {
+  border-left: 3px solid var(--accent-amber);
+  padding-left: 1.5rem;
+}
+
+/* تحسين مظهر الطباعة عند حفظ الصفحات كـ PDF من قبل الصحفيين */
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
